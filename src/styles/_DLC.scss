@@ -1,6 +1,6 @@
 .DLC {
-    background-color: #000 !important;
-    padding: 20px 0 !important; 
+    background-color: #000;
+    padding: 20px 0; 
     .topDLC {
         display: flex;
         flex-direction: column;
@@ -8,6 +8,10 @@
         text-align: center;
         h1,h2,p{
             margin-bottom: 10px;
+            font-size: calc(1rem * 1.5);;
+        }
+        p{
+            margin-bottom: 2vw;
         }
         
     }
@@ -15,15 +19,59 @@
     iframe{
         margin-top: 60px;
     }
-    .video-container {
+    .video {
+        width: 100%;
         display: flex;
         align-items: center;
+        justify-content: center;
+        iframe {
+            max-width: 100%;
+            width: calc(560px * 1.4);
+            height: calc(315px * 1.4);
+        }
+      }
+
+      @media(max-width:768px){
+        .video{
+        iframe{
+            width: calc(560px - 30px);
+            height: calc(315px - 30px);
+        }
+        }
+      }
+
+      .DLCIMG{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5vw;
+        img{
+            margin-right: 3vw;
+        }
+      }
+
+      @media(max-width:768px){
+        .DLCIMG{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            h1,p{
+                font-size: calc(1rem * 1.5);
+            }
+            h1{
+                font-size: calc(1rem * 2);
+                text-align: center;
+                margin: 5vw 0;
+            }
+            img{
+                width: 300px;
+                max-width: 100%;
+            }
+        }
       }
       
-      .video-description {
-        margin-left: 20px; /* Espaço entre o vídeo e o texto */
-      }
 }
+
 
 
   
