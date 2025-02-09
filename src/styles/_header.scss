@@ -1,0 +1,48 @@
+header {
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+    margin: 0;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px ;
+    }
+
+    .header__logoHN {
+            max-width: 100px;
+            margin-top: 0.7vw;
+            margin-bottom: 0.7vw;
+    }
+    .navbar {
+        display: flex;
+        &__links {
+            display: inline-block;
+            color: #fff;
+            padding: 12px;
+            margin-left: 2vw;
+            font-size: 18px;
+            font-weight: lighter;
+            background-color: #273355;
+            border-radius: 20px;
+            letter-spacing: 2px;
+
+            a{
+                color: #fff;
+                text-decoration: none;
+            }
+            
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+    }
+    
+}

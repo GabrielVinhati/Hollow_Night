@@ -1,0 +1,48 @@
+
+.home{
+    background-color: #000;
+    margin-top: 3vw !important;
+    display: flex;
+
+    .home__text{
+        margin-left: 2vw;
+
+        h1{
+            margin-bottom: 2vw;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes typing {
+  0% {
+    visibility: hidden;
+    width: 0;
+  }
+  100% {
+    visibility: visible;
+    width: 100%;
+  }
+}
+
+  @media (max-width: 768px) {
+    .home{
+        display: block;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    
+  }
+  

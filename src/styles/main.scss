@@ -1,0 +1,115 @@
+@use 'variaveis';
+@use 'header';
+@use 'home';
+@use 'welcome';
+@use 'DLC';
+
+@font-face{
+    font-family: "Helvetica";
+    src: url(../fonts/Trajan_Pro_Regular/Trajan\ Pro\ Regular.ttf);
+    font-weight: 400;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica" sans-serif;
+    list-style: none;
+}
+
+.container{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body{
+    background-color: variaveis.$corDeFundo;
+}
+
+@mixin text($fontSize: 16px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoPrincipal
+}
+
+@mixin title($fontSize: 40px){
+    @include text($fontSize);
+    color: variaveis.$corTextoSecundario;
+}
+
+.text--big{
+    @include text(18px);
+
+    @media (max-width:768px){
+        @include text(15px);
+    }
+}
+
+.text{
+    @include text;
+
+    @media (max-width:768px){
+        @include text(14px);
+    }
+}
+
+.text--small{
+    @include text(12px);
+
+    @media (max-width:768px){
+        @include text(11px);
+    }
+}
+
+.title--big{
+    @include title(44px);
+
+    @media (max-width:768px){
+        @include title(26px);
+    }
+}
+.title{
+    @include title;
+
+    @media (max-width:768px){
+        @include title(24px);
+    }
+}
+.title--small {
+    @include title(28px);
+
+    @media (max-width:768px){
+        @include title(22px);
+    }
+}
+
+.link-text{
+    @include text(18px);
+    color: variaveis.$corTextoSecundario;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$corTextoSecundario;
+    background-color: variaveis.$corDeFundoBotaoPrimario;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corDeFundoBotaoPrimario;
+
+}
+
+html {
+    scroll-padding-top: 150px;
+  }
+  
